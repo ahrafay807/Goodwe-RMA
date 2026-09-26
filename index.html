@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +18,7 @@
   var APP = 'https://script.google.com/macros/s/AKfycbyW4RENhadAPgwpvXS8L5QxHhcusdLFCfK8t7CJ_HQF6KvH2dY_GGk4Jjn0ipUEKjaj/exec';
   // /staff or ?staff opens the staff login
   var staff = /(^|\/)staff\/?$/.test(location.pathname) || /[?&]staff\b/.test(location.search);
-  document.getElementById('app').src = APP + (staff ? '?staff' : '');
+  document.getElementById('app').src = APP + (staff ? '?staff' : location.search);   // keeps ?t=... from ticket links
 </script>
 </body>
 </html>
